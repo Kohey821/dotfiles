@@ -1,0 +1,10 @@
+/*
+
+!.gitignore
+
+!autoload
+!rc
+!swp
+!undo
+
+!coc-settings.json

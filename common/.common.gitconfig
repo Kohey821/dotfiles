@@ -1,0 +1,10 @@
+[core]
+	autocrlf = input
+	editor = vim
+[credential]
+	helper = store
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	tree = log --graph --branches
