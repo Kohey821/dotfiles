@@ -44,6 +44,11 @@ alias d='docker'
 alias dc='docker-compose'
 
 
+if which ranger &> /dev/null; then
+  alias r='ranger'
+fi
+
+
 if which ruby >/dev/null && which gem >/dev/null; then
   PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi

@@ -39,7 +39,7 @@ source ~/.common.bashrc
 
 [exa](https://the.exa.website/) [fish](https://fishshell.com/) [nodejs npm](https://nodejs.org/)をインストール (Ubuntu注意)
 
-`neovim tmux trash-cli xclip`をインストール
+`neovim ranger tmux trash-cli xclip`をインストール
 
 `./make-linux.sh`を実行 (エラー注意)
 

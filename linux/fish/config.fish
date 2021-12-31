@@ -40,6 +40,11 @@ alias d='docker'
 alias dc='docker-compose'
 
 
+if which ranger &> /dev/null
+  alias r='ranger'
+end
+
+
 if which ruby &> /dev/null && which gem &> /dev/null
   fish_add_path -g (ruby -r rubygems -e 'puts Gem.user_dir')/bin
 end
