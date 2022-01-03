@@ -97,10 +97,16 @@ XMODIFIERS=@im=fcitx
 
 ```
 maximize
+
 move-to-workspace-down
 move-to-workspace-left
 move-to-workspace-right
 move-to-workspace-up
+
+switch-applications
+switch-applications-backward
+switch-windows
+switch-windows-backward
 ```
 
 ## Windows
