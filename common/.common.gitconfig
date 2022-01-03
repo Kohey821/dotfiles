@@ -1,6 +1,7 @@
 [core]
 	autocrlf = input
 	editor = vim
+	filemode = false
 [credential]
 	helper = store
 [alias]
