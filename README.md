@@ -49,7 +49,7 @@ source ~/.common.bashrc
 
 [tmuxinator](https://github.com/tmuxinator/tmuxinator)をインストール
 
-defxが依存する[pynvim](https://github.com/prompt-toolkit/pyvim)をインストールして
+[defxが依存するpynvimをインストール](https://github.com/Shougo/defx.nvim#requirements)して
 
 ```
 vim \
@@ -90,8 +90,6 @@ XMODIFIERS=@im=fcitx
 ##### シェル拡張
 
 [Vitals](https://extensions.gnome.org/extension/1460/vitals/)をインストール
-
-[Unite](https://extensions.gnome.org/extension/1287/unite/)をインストール
 
 ##### ショートカット
 
