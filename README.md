@@ -8,6 +8,10 @@
 
 ## 共通2
 
+[vim-plug](https://github.com/junegunn/vim-plug#installation)をインストール
+
+## 共通3
+
 `~/.gitconfig`に
 
 ```
@@ -49,6 +53,8 @@ source ~/.common.bashrc
 
 [tmuxinator](https://github.com/tmuxinator/tmuxinator)をインストール
 
+[共通2](#共通2)を行った後
+
 [defxが依存するpynvimをインストール](https://github.com/Shougo/defx.nvim#requirements)して
 
 ```
@@ -61,7 +67,7 @@ vim \
 
 を実行
 
-[共通2](#共通2)を行う
+[共通3](#共通3)を行う
 
 ### 日本語
 
@@ -117,6 +123,8 @@ switch-windows-backward
 
 `./make-windows.ps1`を実行
 
+[共通2](#共通2)を行った後
+
 ```
 vim \
   -c 'PlugUpgrade' \
@@ -126,4 +134,4 @@ vim \
 
 を実行
 
-[共通2](#共通2)を行う
+[共通3](#共通3)を行う
