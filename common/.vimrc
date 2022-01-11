@@ -80,8 +80,6 @@ Plug 'dag/vim-fish'
 Plug 'tikhomirov/vim-glsl'
 
 Plug 'Vimjas/vim-python-pep8-indent'
-
-Plug 'jwalton512/vim-blade'
 " }}}
 
 " その他 {{{
