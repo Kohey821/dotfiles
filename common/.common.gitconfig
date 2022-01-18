@@ -9,3 +9,5 @@
 	co = checkout
 	ci = commit
 	tree = log --graph --branches
+[init]
+	defaultBranch = main
