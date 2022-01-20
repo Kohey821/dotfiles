@@ -5,6 +5,7 @@
 [credential]
 	helper = store
 [alias]
+	br = branch
 	st = status
 	co = checkout
 	ci = commit
