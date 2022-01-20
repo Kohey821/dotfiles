@@ -682,6 +682,11 @@ nnoremap sj <C-w>j<CR>
 nnoremap sk <C-w>k<CR>
 nnoremap sl <C-w>l<CR>
 " }}}
+
+" diff {{{
+nnoremap <leader>d :<C-u>windo diffthis<CR>
+nnoremap <leader>D :<C-u>windo diffoff<CR>
+" }}}
 " }}}
 
 " その他 {{{
