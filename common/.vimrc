@@ -534,6 +534,18 @@ endfunction
 
 " status line
 set statusline=\ %f\ %m\ %r%=(%l:%c)\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
+
+" folding {{{
+set foldmethod=manual
+
+" NOTE: defxとぶつかる
+" augroup FoldState
+"   au!
+"
+"   au BufWinLeave * mkview
+"   au BufWinEnter * silent! loadview
+" augroup END
+" }}}
 " }}}
 
 " 操作（cocで必須のものはcoc設定に記述） {{{
@@ -561,18 +573,6 @@ endif
 
 set fileencodings=utf-8,euc-jp,sjis,iso-2022-jp
 set fileformats=unix,dos,mac
-
-" folding {{{
-set foldmethod=manual
-
-" NOTE: defxとぶつかる
-" augroup FoldState
-"   au!
-"
-"   au BufWinLeave * mkview
-"   au BufWinEnter * silent! loadview
-" augroup END
-" }}}
 
 if has('mouse')
   set mouse=a
