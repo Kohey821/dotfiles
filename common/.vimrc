@@ -596,7 +596,7 @@ set wildignorecase
 " grep
 autocmd QuickFixCmdPost *grep* cwindow
 
-" indent mode toggling {{{
+" indent mode toggle {{{
 set autoindent
 
 let s:defaultIndentSize = 2
@@ -633,7 +633,7 @@ nnoremap <silent> <Leader><Tab> :<C-U>call SetTabMode(v:count)<CR>
 nnoremap <silent> <Leader><S-Tab> :<C-U>call UnsetTabMode(v:count)<CR>
 " }}}
 
-" line number toggling {{{
+" line number toggle {{{
 function! ToggleNumber()
   if &rnu == 1
      set relativenumber!
