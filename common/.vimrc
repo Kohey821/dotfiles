@@ -677,6 +677,12 @@ nnoremap tC :tabdo close<CR>
 " disable undo each line
 nnoremap U u
 
+" undo list
+nnoremap <leader>u :<C-u>undolist<CR>
+
+" jump list
+nnoremap <leader>j :<C-u>jumps<CR>
+
 " window {{{
 nnoremap sp :split<CR>
 nnoremap vs :vsplit<CR>
