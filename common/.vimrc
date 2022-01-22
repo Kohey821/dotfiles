@@ -563,7 +563,7 @@ set fileencodings=utf-8,euc-jp,sjis,iso-2022-jp
 set fileformats=unix,dos,mac
 
 " folding {{{
-set foldmethod=marker
+set foldmethod=manual
 
 " NOTE: defxとぶつかる
 " augroup FoldState
@@ -713,3 +713,5 @@ function! s:command_profile() abort
 endfunction
 " }}}
 " }}}
+
+" vim: foldmethod=marker
