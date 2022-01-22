@@ -647,6 +647,10 @@ endfunction
 nmap <silent> <leader>n :<C-U>call ToggleNumber()<CR>
 " }}}
 
+" line wrap toggle {{{
+nnoremap <leader>w :<C-u>set wrap!<CR>
+" }}}
+
 " quickfix {{{
 nmap ]q :cnext<CR>
 nmap [q :cprevious<CR>
