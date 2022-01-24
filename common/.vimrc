@@ -683,6 +683,9 @@ nnoremap <leader>u :<C-u>undolist<CR>
 " jump list
 nnoremap <leader>j :<C-u>jumps<CR>
 
+" registers
+nnoremap <leader>r :<C-u>registers<CR>
+
 " window {{{
 nnoremap sp :split<CR>
 nnoremap vs :vsplit<CR>
