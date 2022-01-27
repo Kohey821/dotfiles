@@ -1,2 +1,5 @@
+[defaults]
+revert = --no-backup
+
 [extensions]
 shelve=
