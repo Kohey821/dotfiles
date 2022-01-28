@@ -687,13 +687,7 @@ nnoremap <leader>j :<C-u>jumps<CR>
 nnoremap <leader>r :<C-u>registers<CR>
 
 " window {{{
-nnoremap sp :split<CR>
-nnoremap vs :vsplit<CR>
-
-nnoremap sh <C-w>h<CR>
-nnoremap sj <C-w>j<CR>
-nnoremap sk <C-w>k<CR>
-nnoremap sl <C-w>l<CR>
+nnoremap s <C-w>
 " }}}
 
 " diff {{{
