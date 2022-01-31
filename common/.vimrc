@@ -674,6 +674,11 @@ nnoremap tc :tabclose<CR>
 nnoremap tC :tabdo close<CR>
 " }}}
 
+" directory {{{
+nnoremap <leader>. :<C-u>lcd<space>
+nnoremap <leader>> :<C-u>cd<space>
+" }}}
+
 " disable undo each line
 nnoremap U u
 
