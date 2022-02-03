@@ -533,7 +533,7 @@ endfunction
 " }}}
 
 " status line
-set statusline=\ %f\ %m\ %r%=(%l:%c)\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
+set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
 
 " folding {{{
 set foldmethod=manual
