@@ -16,30 +16,19 @@ Plug 'ap/vim-css-color'
 " }}}
 
 " 操作 {{{
-if ! (has('win32') || has('win64'))
-  if has('nvim')
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/defx.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-
-  Plug 'kristijanhusak/defx-git'
-  Plug 'kristijanhusak/defx-icons'
-
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'preservim/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'PhilRunninger/nerdtree-buffer-ops'
-  Plug 'PhilRunninger/nerdtree-visual-selection'
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
-  Plug 'ctrlpvim/ctrlp.vim'
-end
+Plug 'kristijanhusak/defx-git'
+Plug 'kristijanhusak/defx-icons'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -104,118 +93,87 @@ colorscheme NeoSolarized
 set background=dark
 " }}}
 
-if ! (has('win32') || has('win64'))
-  " defx {{{
-  autocmd FileType defx call s:defx_my_settings()
-  function! s:defx_my_settings() abort
-    nnoremap <silent><buffer><expr> <CR>
-          \ defx#do_action('open')
-    nnoremap <silent><buffer><expr> c
-          \ defx#do_action('copy')
-    nnoremap <silent><buffer><expr> m
-          \ defx#do_action('move')
-    nnoremap <silent><buffer><expr> p
-          \ defx#do_action('paste')
-    nnoremap <silent><buffer><expr> l
-          \ defx#do_action('open')
-    nnoremap <silent><buffer><expr> E
-          \ defx#do_action('open', 'vsplit')
-    nnoremap <silent><buffer><expr> P
-          \ defx#do_action('preview')
-    nnoremap <silent><buffer><expr> o
-          \ defx#do_action('open_tree', 'toggle')
-    nnoremap <silent><buffer><expr> K
-          \ defx#do_action('new_directory')
-    nnoremap <silent><buffer><expr> N
-          \ defx#do_action('new_file')
-    nnoremap <silent><buffer><expr> M
-          \ defx#do_action('new_multiple_files')
-    nnoremap <silent><buffer><expr> C
-          \ defx#do_action('toggle_columns',
-          \                'mark:indent:icon:filename:type:size:time')
-    nnoremap <silent><buffer><expr> S
-          \ defx#do_action('toggle_sort', 'time')
-    nnoremap <silent><buffer><expr> d
-          \ defx#do_action('remove')
-    nnoremap <silent><buffer><expr> r
-          \ defx#do_action('rename')
-    nnoremap <silent><buffer><expr> !
-          \ defx#do_action('execute_command')
-    nnoremap <silent><buffer><expr> x
-          \ defx#do_action('execute_system')
-    nnoremap <silent><buffer><expr> yy
-          \ defx#do_action('yank_path')
-    nnoremap <silent><buffer><expr> .
-          \ defx#do_action('toggle_ignored_files')
-    nnoremap <silent><buffer><expr> ;
-          \ defx#do_action('repeat')
-    nnoremap <silent><buffer><expr> h
-          \ defx#do_action('cd', ['..'])
-    nnoremap <silent><buffer><expr> ~
-          \ defx#do_action('cd')
-    nnoremap <silent><buffer><expr> q
-          \ defx#do_action('quit')
-    nnoremap <silent><buffer><expr> <TAB>
-          \ defx#do_action('toggle_select')
-    nnoremap <silent><buffer><expr> *
-          \ defx#do_action('toggle_select_all')
-    nnoremap <silent><buffer><expr> j
-          \ line('.') == line('$') ? 'gg' : 'j'
-    nnoremap <silent><buffer><expr> k
-          \ line('.') == 1 ? 'G' : 'k'
-    nnoremap <silent><buffer><expr> <C-l>
-          \ defx#do_action('redraw')
-    nnoremap <silent><buffer><expr> <C-g>
-          \ defx#do_action('print')
-    nnoremap <silent><buffer><expr> cd
-          \ defx#do_action('change_vim_cwd')
-  endfunction
-  nmap <leader>e :exe "Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type " . expand('%:h')<CR>
-  nmap <leader>E :Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type<CR>
-  " }}}
+" defx {{{
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+        \ defx#do_action('open')
+  nnoremap <silent><buffer><expr> c
+        \ defx#do_action('copy')
+  nnoremap <silent><buffer><expr> m
+        \ defx#do_action('move')
+  nnoremap <silent><buffer><expr> p
+        \ defx#do_action('paste')
+  nnoremap <silent><buffer><expr> l
+        \ defx#do_action('open')
+  nnoremap <silent><buffer><expr> E
+        \ defx#do_action('open', 'vsplit')
+  nnoremap <silent><buffer><expr> P
+        \ defx#do_action('preview')
+  nnoremap <silent><buffer><expr> o
+        \ defx#do_action('open_tree', 'toggle')
+  nnoremap <silent><buffer><expr> K
+        \ defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> N
+        \ defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> M
+        \ defx#do_action('new_multiple_files')
+  nnoremap <silent><buffer><expr> C
+        \ defx#do_action('toggle_columns',
+        \                'mark:indent:icon:filename:type:size:time')
+  nnoremap <silent><buffer><expr> S
+        \ defx#do_action('toggle_sort', 'time')
+  nnoremap <silent><buffer><expr> d
+        \ defx#do_action('remove')
+  nnoremap <silent><buffer><expr> r
+        \ defx#do_action('rename')
+  nnoremap <silent><buffer><expr> !
+        \ defx#do_action('execute_command')
+  nnoremap <silent><buffer><expr> x
+        \ defx#do_action('execute_system')
+  nnoremap <silent><buffer><expr> yy
+        \ defx#do_action('yank_path')
+  nnoremap <silent><buffer><expr> .
+        \ defx#do_action('toggle_ignored_files')
+  nnoremap <silent><buffer><expr> ;
+        \ defx#do_action('repeat')
+  nnoremap <silent><buffer><expr> h
+        \ defx#do_action('cd', ['..'])
+  nnoremap <silent><buffer><expr> ~
+        \ defx#do_action('cd')
+  nnoremap <silent><buffer><expr> q
+        \ defx#do_action('quit')
+  nnoremap <silent><buffer><expr> <TAB>
+        \ defx#do_action('toggle_select')
+  nnoremap <silent><buffer><expr> *
+        \ defx#do_action('toggle_select_all')
+  nnoremap <silent><buffer><expr> j
+        \ line('.') == line('$') ? 'gg' : 'j'
+  nnoremap <silent><buffer><expr> k
+        \ line('.') == 1 ? 'G' : 'k'
+  nnoremap <silent><buffer><expr> <C-l>
+        \ defx#do_action('redraw')
+  nnoremap <silent><buffer><expr> <C-g>
+        \ defx#do_action('print')
+  nnoremap <silent><buffer><expr> cd
+        \ defx#do_action('change_vim_cwd')
+endfunction
+nmap <leader>e :exe "Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type " . expand('%:h')<CR>
+nmap <leader>E :Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type<CR>
+" }}}
 
-  " fzf {{{
-  if executable('rg')
-    nmap <leader>g :Rg  <BS>
-  end
-
-  nmap <leader>b :Buffers<CR>
-  nmap <leader>F :Files  <BS>
-  nmap <leader>f :Files<CR>
-  nmap ,g :GFiles?<CR>
-  nmap ,G :GFiles<CR>
-  nmap <leader>h :History<CR>
-  " }}}
-else
-  " nerdtree {{{
-  nmap <leader>e :e .<CR>
-
-  let NERDTreeShowHidden=1
-  " }}}
-
-  " ctrlp {{{
-  let g:ctrlp_map = '<leader>f'
-  let g:ctrlp_cmd = 'CtrlP'
-
-  let g:ctrlp_working_path_mode = 'a'
-
-  set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/templates_c/*
-  if has('win32') || has ('win64')
-    set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*\\templates_c\\*
-  endif
-
-  let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ 'link': 'some_bad_symbolic_links',
-    \ }
-
-  let g:ctrlp_user_command = 'find %s -type f'
-  if has('win32') || has ('win64')
-    let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'
-  endif
-  " }}}
+" fzf {{{
+if executable('rg')
+  nmap <leader>g :Rg  <BS>
 end
+
+nmap <leader>b :Buffers<CR>
+nmap <leader>F :Files  <BS>
+nmap <leader>f :Files<CR>
+nmap ,g :GFiles?<CR>
+nmap ,G :GFiles<CR>
+nmap <leader>h :History<CR>
+" }}}
 
 " coc {{{
 " https://github.com/neoclide/coc.nvim#example-vim-configuration からサンプルをコピーして編集 {{{

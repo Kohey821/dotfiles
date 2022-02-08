@@ -2,7 +2,7 @@
 
 cd $(dirname $0)
 
-directories=('common' 'linux')
+directories=('main')
 
 for i in ${directories[@]}; do
   for j in $(\ls -a -1 $i); do
