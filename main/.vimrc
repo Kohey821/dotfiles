@@ -453,7 +453,7 @@ set listchars=tab:→\ ,extends:»,precedes:«
 set list
 
 " ruler
-set colorcolumn=80
+set colorcolumn=80,100,120
 
 " tabline {{{
 " デフォルトで1つ表示
