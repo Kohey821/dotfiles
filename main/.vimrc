@@ -13,7 +13,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'will133/vim-dirdiff'
 
 Plug 'ap/vim-css-color'
-" }}}
+" 表示 }}}
 
 " 操作 {{{
 if has('nvim')
@@ -46,7 +46,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'mattn/emmet-vim'
-" }}}
+" 操作 }}}
 
 " シンタックス {{{
 Plug 'pprovost/vim-ps1'
@@ -69,18 +69,18 @@ Plug 'dag/vim-fish'
 Plug 'tikhomirov/vim-glsl'
 
 Plug 'Vimjas/vim-python-pep8-indent'
-" }}}
+" シンタックス }}}
 
 " その他 {{{
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 Plug 'tpope/vim-fugitive'
-" }}}
+" その他 }}}
 call plug#end()
-" }}}
+" プラグインインストール }}}
 
 " プラグイン設定 {{{
-" NeoSolarized {{{
+" NeoSolarized
 set termguicolors
 let g:neosolarized_contrast = "normal"
 let g:neosolarized_visibility = "normal"
@@ -91,7 +91,6 @@ let g:neosolarized_italic = 1
 let g:neosolarized_termBoldAsBright = 0
 colorscheme NeoSolarized
 set background=dark
-" }}}
 
 " defx {{{
 autocmd FileType defx call s:defx_my_settings()
@@ -160,7 +159,7 @@ function! s:defx_my_settings() abort
 endfunction
 nmap <leader>e :exe "Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type " . expand('%:h')<CR>
 nmap <leader>E :Defx -show-ignored-files -columns=git:mark:icons:indent:filename:type<CR>
-" }}}
+" defx }}}
 
 " fzf {{{
 if executable('rg')
@@ -173,10 +172,10 @@ nmap <leader>f :Files<CR>
 nmap ,g :GFiles?<CR>
 nmap ,G :GFiles<CR>
 nmap <leader>h :History<CR>
-" }}}
+" fzf }}}
 
 " coc {{{
-" https://github.com/neoclide/coc.nvim#example-vim-configuration からサンプルをコピーして編集 {{{
+" basic {{{
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -340,7 +339,7 @@ nnoremap <silent><nowait> <space><space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space><space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space><space>p  :<C-u>CocListResume<CR>
-" }}}
+" basic }}}
 
 " extensions {{{
 " basic
@@ -427,21 +426,19 @@ let g:coc_global_extensions += [
 let g:coc_global_extensions += [
       \ 'coc-calc',
       \ ]
-" }}}
-" }}}
+" extensions }}}
+" coc }}}
 
-" vim-better-whitespace {{{
+" vim-better-whitespace
 let g:better_whitespace_enabled=1
 " let g:strip_whitespace_on_save=1
-" }}}
 
-" vim-indent-guides {{{
+" vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 0
 nnoremap <leader>i :IndentGuidesToggle<CR>
-" }}}
-" }}}
+" プラグイン設定 }}}
 
-" 表示（cocで必須のものはcoc設定に記述） {{{
+" 表示 {{{
 " line number
 set number
 
@@ -487,8 +484,8 @@ endfunction
 function MyTabLabel(n)
   return a:n . ' ' . fnamemodify(getcwd(tabpagewinnr(a:n), a:n), ':t')
 endfunction
-" }}}
-" }}}
+" 表示項目 }}}
+" tabline }}}
 
 " status line
 set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
@@ -503,10 +500,10 @@ set foldmethod=manual
 "   au BufWinLeave * mkview
 "   au BufWinEnter * silent! loadview
 " augroup END
-" }}}
-" }}}
+" folding }}}
+" 表示 }}}
 
-" 操作（cocで必須のものはcoc設定に記述） {{{
+" 操作 {{{
 " swap file
 set directory=~/.vim/swp
 
@@ -536,19 +533,17 @@ if has('mouse')
   set mouse=a
 endif
 
-" search {{{
+" search
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-" }}}
 
-" コマンド補完 {{{
+" コマンド補完
 set wildmenu
 set wildmode=longest:full,full
 set wildignorecase
-" }}}
-" }}}
+" 操作 }}}
 
 " キーマップ {{{
 " grep
@@ -589,7 +584,7 @@ endfunction
 
 nnoremap <silent> <Leader><Tab> :<C-U>call SetTabMode(v:count)<CR>
 nnoremap <silent> <Leader><S-Tab> :<C-U>call UnsetTabMode(v:count)<CR>
-" }}}
+" indent mode toggle }}}
 
 " line number toggle {{{
 function! ToggleNumber()
@@ -603,18 +598,16 @@ function! ToggleNumber()
 endfunction
 
 nmap <silent> <leader>n :<C-U>call ToggleNumber()<CR>
-" }}}
+" line number toggle }}}
 
-" line wrap toggle {{{
+" line wrap toggle
 nnoremap <leader>w :<C-u>set wrap!<CR>
-" }}}
 
-" quickfix {{{
+" quickfix
 nmap ]q :cnext<CR>
 nmap [q :cprevious<CR>
 nmap ]Q :clast<CR>
 nmap [Q :cfirst<CR>
-" }}}
 
 " tab {{{
 nnoremap tl :tabnext<CR>
@@ -630,12 +623,11 @@ nnoremap te :tabedit<CR>
 
 nnoremap tc :tabclose<CR>
 nnoremap tC :tabdo close<CR>
-" }}}
+" tab }}}
 
-" directory {{{
+" directory
 nnoremap <leader>. :<C-u>lcd<space>
 nnoremap <leader>> :<C-u>cd<space>
-" }}}
 
 " disable undo each line
 nnoremap U u
@@ -649,15 +641,13 @@ nnoremap <leader>j :<C-u>jumps<CR>
 " registers
 nnoremap <leader>r :<C-u>registers<CR>
 
-" window {{{
+" window
 nnoremap s <C-w>
-" }}}
 
-" diff {{{
+" diff
 nnoremap <leader>d :<C-u>windo diffthis<CR>
 nnoremap <leader>D :<C-u>windo diffoff<CR>
-" }}}
-" }}}
+" キーマップ }}}
 
 " その他 {{{
 " gvim用
@@ -671,7 +661,7 @@ function! s:command_profile() abort
   profile func *
   profile file *
 endfunction
-" }}}
-" }}}
+" デバッグ }}}
+" その他 }}}
 
 " vim: foldmethod=marker
