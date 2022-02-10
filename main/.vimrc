@@ -664,5 +664,3 @@ function! s:command_profile() abort
 endfunction
 " デバッグ }}}
 " その他 }}}
-
-" vim: foldmethod=marker
