@@ -1,7 +1,8 @@
 " leaderキーを設定
 let mapleader = "\<Space>"
 
-" プラグインインストール {{{
+" プラグイン {{{
+" インストール {{{
 call plug#begin('~/.vim/plugged')
 " 表示 {{{
 Plug 'overcache/NeoSolarized'
@@ -77,9 +78,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tpope/vim-fugitive'
 " その他 }}}
 call plug#end()
-" プラグインインストール }}}
+" インストール }}}
 
-" プラグイン設定 {{{
+" 設定 {{{
 " NeoSolarized
 set termguicolors
 let g:neosolarized_contrast = "normal"
@@ -436,7 +437,8 @@ let g:better_whitespace_enabled=1
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 0
 nnoremap <leader>i :IndentGuidesToggle<CR>
-" プラグイン設定 }}}
+" 設定 }}}
+" プラグイン }}}
 
 " 表示 {{{
 " line number
