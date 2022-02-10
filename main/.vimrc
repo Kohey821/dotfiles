@@ -495,13 +495,12 @@ set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileforma
 " folding {{{
 set foldmethod=manual
 
-" NOTE: defxとぶつかる
-" augroup FoldState
-"   au!
-"
-"   au BufWinLeave * mkview
-"   au BufWinEnter * silent! loadview
-" augroup END
+augroup FoldState
+  au!
+
+  au BufWinLeave ?* mkview
+  au BufWinEnter ?* silent loadview
+augroup END
 " folding }}}
 " 表示 }}}
 
