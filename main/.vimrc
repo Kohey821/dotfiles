@@ -493,18 +493,18 @@ endfunction
 set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
 
 " folding {{{
-set foldmethod=manual
+set foldmethod=indent
 
-function! FoldStateUsable()
-  return expand('%') != '' && &buftype !~ 'nofile'
-endfunction
-
-augroup FoldState
-  au!
-
-  au BufWinLeave * if FoldStateUsable() | mkview | endif
-  au BufWinEnter * if FoldStateUsable() | silent loadview | endif
-augroup END
+" function! FoldStateUsable()
+"   return expand('%') != '' && &buftype !~ 'nofile'
+" endfunction
+"
+" augroup FoldState
+"   au!
+"
+"   au BufWinLeave * if FoldStateUsable() | mkview | endif
+"   au BufWinEnter * if FoldStateUsable() | silent loadview | endif
+" augroup END
 " folding }}}
 " 表示 }}}
 
@@ -668,3 +668,5 @@ function! s:command_profile() abort
 endfunction
 " デバッグ }}}
 " その他 }}}
+
+" vim: fdm=marker
