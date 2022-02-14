@@ -493,7 +493,7 @@ endfunction
 set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileformat}\ " space
 
 " folding {{{
-set foldmethod=indent
+set foldmethod=manual
 
 " function! FoldStateUsable()
 "   return expand('%') != '' && &buftype !~ 'nofile'
