@@ -2,4 +2,5 @@
 revert = --no-backup
 
 [extensions]
+purge=
 shelve=
