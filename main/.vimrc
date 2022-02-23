@@ -495,16 +495,11 @@ set statusline=\ %f\ %m\ %r%=%lg\ %c\|\ %p%%\ %y\ %{&fileencoding}\ %{&fileforma
 " folding {{{
 set foldmethod=manual
 
-" function! FoldStateUsable()
-"   return expand('%') != '' && &buftype !~ 'nofile'
-" endfunction
-"
-" augroup FoldState
-"   au!
-"
-"   au BufWinLeave * if FoldStateUsable() | mkview | endif
-"   au BufWinEnter * if FoldStateUsable() | silent loadview | endif
-" augroup END
+" Save fold settings.
+autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
+autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+" Don't save options.
+set viewoptions-=options
 " folding }}}
 " 表示 }}}
 
