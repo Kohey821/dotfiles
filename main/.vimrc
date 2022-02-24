@@ -497,7 +497,7 @@ set foldmethod=manual
 
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
-autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent! loadview | endif
 " Don't save curdir.
 set viewoptions-=curdir
 " folding }}}
