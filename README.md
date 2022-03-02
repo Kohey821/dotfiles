@@ -56,3 +56,9 @@ source ~/.common.bashrc
 ```
 
 を追記
+
+### WSL
+
+[win32yank.exe](https://github.com/neovim/neovim/wiki/FAQ#is-windows-supported)をインストール
+
+eth0のmtuを調節
