@@ -63,7 +63,7 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " NOTE: cocと併用でフリーズ気味になる気がする...
-" Plug 'leafOfTree/vim-vue-plugin'
+Plug 'leafOfTree/vim-vue-plugin'
 
 Plug 'dag/vim-fish'
 
