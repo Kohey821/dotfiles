@@ -513,10 +513,6 @@ set backspace=2
 
 filetype plugin indent on
 
-" html indent issue
-let g:html_indent_script1 = "zero"
-let g:html_indent_style1 = "zero"
-
 " if file has changed,
 set autoread
 
