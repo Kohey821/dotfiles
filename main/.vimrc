@@ -511,7 +511,7 @@ set undodir=~/.vim/undo
 
 set backspace=2
 
-" filetype plugin indent on
+filetype plugin indent on
 
 " html indent issue
 let g:html_indent_script1 = "zero"
