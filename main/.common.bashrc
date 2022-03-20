@@ -8,7 +8,7 @@ if which exa &> /dev/null; then
   alias ls='exa'
 fi
 alias l='ls -CF'
-alias la='ls -A'
+alias la='ls -a'
 alias ll='ls -alFh'
 
 

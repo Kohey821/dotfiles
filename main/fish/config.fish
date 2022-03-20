@@ -10,6 +10,9 @@ end
 if which exa &> /dev/null
   alias ls='exa'
 end
+alias l='ls -CF'
+alias la='ls -a'
+alias ll='ls -alFh'
 
 
 alias rm='trash-put'
