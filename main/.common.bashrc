@@ -40,6 +40,7 @@ if which tmux &> /dev/null; then
   alias td='t detach'
   alias tl='t ls'
   alias tn='t new -As'
+  alias tk='t kill-session'
 fi
 
 

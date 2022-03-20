@@ -40,6 +40,7 @@ alias ta='t attach'
 alias td='t detach'
 alias tl='t ls'
 alias tn='t new -As'
+alias tk='t kill-session'
 
 
 alias d='docker'
