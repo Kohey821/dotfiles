@@ -11,7 +11,7 @@ if which exa &> /dev/null
   alias ls='exa'
 end
 alias l='ls -CF'
-alias la='ls -a'
+alias la='ls -al'
 alias ll='ls -alFh'
 
 
