@@ -9,7 +9,8 @@
 	st = status
 	co = checkout
 	ci = commit
-	tree = log --graph --all --abbrev-commit --decorate --date=relative --pretty=format:'%C(auto)%h%Creset %C(auto)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset'
+	tree = log --graph --abbrev-commit --decorate --date=relative --pretty=format:'%C(auto)%h%Creset %C(auto)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset'
+	tree-all = tree --all
 [init]
 	defaultBranch = main
 [fetch]
