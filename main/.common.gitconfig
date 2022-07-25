@@ -11,6 +11,7 @@
 	ci = commit
 	tree = log --graph --abbrev-commit --decorate --date=relative --pretty=format:'%C(auto)%h%Creset %C(auto)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset'
 	tree-all = tree --all
+	ls = ls-files
 [init]
 	defaultBranch = main
 [fetch]
